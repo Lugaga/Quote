@@ -1,0 +1,10 @@
+.row div{
+  padding:20px;
+}
+
+.quote{
+  margin-top:10px;
+  border-radius:5px;
+  background-color:purple;
+  color:white;
+}

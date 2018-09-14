@@ -1,0 +1,9 @@
+img{
+  cursor:pointer;
+  width:25px;
+  height:25px;
+}
+
+.detail{
+  font-weight:bold;
+}

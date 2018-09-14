@@ -1,0 +1,25 @@
+<form (ngSubmit)='sendsOutput()'>
+ <div class="form-group">
+   <label for="name">Publisher</label>
+    <input type="text" name="name" class="form-control" [(ngModel)]='quote.publisher' id="name" #name='ngModel' required/>
+    <div class="alert alert-danger" [hidden]="name.valid || name.pristine">
+       Error in Name
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="description">Quote</label>
+    <textarea  name="description" class="form-control" [(ngModel)]='quote.quote' #description='ngModel'id="description" rows="6" required>
+    </textarea>
+    <div class="alert alert-danger" [hidden]="description.valid || description.pristine">
+       Error in Quote
+    </div>
+  </div>
+ <div class="form-group">
+    <label for="date">Author</label>
+    <input type="text" name="author" class="form-control" [(ngModel)]='quote.author' #author='ngModel' id="author" required/>
+    <div class="alert alert-danger" [hidden]="author.valid || author.pristine">
+       Error in Author
+    </div>
+  </div>
+  <button type="submit" name="button" class="btn btn-success">Post Quote</button>
+</form>
