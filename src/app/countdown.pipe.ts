@@ -10,18 +10,8 @@ export class CountdownPipe implements PipeTransform {
 
   }
 transform(value: any):any{
-     // this.removeTimer();
-     // let t = new Date(value);
-     // let rightNow = new Date();
      let seconds =value;
-     // let seconds = Math.round(Math.abs((rightNow.getTime()-t.getTime())/1000));
-     // let postToUpdate = (Number.isNaN(seconds)) ? 1000 : this.getSecondsUntilUpdate(seconds) *1000;
-     // this.timer = this.NgZone.runOutsideAngular(()=> {
-     //     return window.setTimeout(()=> {
-     //       this.NgZone.run(()=>this.ChangeDetectorRef.markForCheck());
-     //     },1000);
-     // });
-     let minutes = Math.round(Math.abs(seconds / 60));
+    let minutes = Math.round(Math.abs(seconds / 60));
  		let hours = Math.round(Math.abs(minutes / 60));
  		let days = Math.round(Math.abs(hours / 24));
  		let months = Math.round(Math.abs(days/30.416));
@@ -48,34 +38,12 @@ transform(value: any):any{
  			return months + ' months ago';
  		} else if (days <= 545) {
  			return 'a year ago';
- 		} else { // (days > 545)
+ 		} else {
  			return years + ' years ago';
  		}
  	}
-     // ngOnDestroy(): void {
-     //   this.removeTimer();
-     // }
-     // private removeTimer(){
-     //   if(this.timer){
-     //     window.clearTimeout(this.timer);
-     //     this.timer = null;
-     //   }
-     // }
-     // private getSecondsUntilUpdate(seconds:number) {
-     //   let min = 60;
-     //   let hr = min * 60;
-     //   let day = hr * 24;
-     //   if(seconds < min){
-     //     return 3;
-     //   } else if (seconds < hr) {
-     //     return 30;
-     //   } else if (seconds < day) {
-     //     return 300;
-     //   } else {
-     //     return 3600;
-     //   }
-     // }
+
      ngOnInit(){
-      // this.removeTimer();
+
      }
   }

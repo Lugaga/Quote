@@ -6,7 +6,9 @@
   </p>
   <span  class="voters">Likes &nbsp;{{quote.likes}}</span>&nbsp;
   <span  class="voters">Dislikes  &nbsp;{{quote.dislikes}}</span> <br>
-  <img src="../assets/like.png" (click)='like()' alt="like">
-  <img src="../assets/dislike.png" (click)='dislike()' alt="dislike">
+  <!-- <img src="../assets/like.png" (click)='like()' alt="like"> -->
+  <a href="#" (click)='like()' class="btn btn-info  style">Like <i class="fas fa-thumbs-up"></i></a>
+  <a  href="#" (click)='dislike()' class="btn btn-info style">Dislike <i class="fas fa-thumbs-down"></i></a>
+   <!-- <img src="../assets/dislike.png" (click)='dislike()' alt="dislike"> -->
   <button type="button" (click)='sendDelete(true)' class="btn btn-danger">Delete</button>
 </div>
