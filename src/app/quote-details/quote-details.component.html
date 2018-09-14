@@ -4,8 +4,8 @@
   <p>
     {{quote.time|countdown}}
   </p>
-  <span style="font-weight:bold" class="voters">Likes &nbsp;{{quote.likes}}</span>&nbsp;
-  <span style="font-weight:bold" class="voters">Dislikes  &nbsp;{{quote.dislikes}}</span> <br>
+  <span  class="voters">Likes &nbsp;{{quote.likes}}</span>&nbsp;
+  <span  class="voters">Dislikes  &nbsp;{{quote.dislikes}}</span> <br>
   <img src="../assets/like.png" (click)='like()' alt="like">
   <img src="../assets/dislike.png" (click)='dislike()' alt="dislike">
   <button type="button" (click)='sendDelete(true)' class="btn btn-danger">Delete</button>
